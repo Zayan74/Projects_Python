@@ -1,0 +1,19 @@
+questions = [
+    ("What is the largest animal in the world: ", "Blue Whale"),
+    ("What is 15 * 3 - 7: ", "38"),
+    ("What is the capital of the USA: ", "Washington DC"),
+    ("What is the biggest desert in the world: ", "Antarctica"),
+    ("What type of animal is a crocodile: ", "Reptile"),
+    ]
+score = 0
+index = 0
+while index < len(questions):
+    question, answer = questions[index]
+    user_answer = input(f"{question}")
+    if user_answer.lower() == answer.lower():
+        print("Correct")
+        score += 1
+    else:
+        print("Incorrect")
+    index += 1
+print(f"Your score is {score} out of {len(questions)}")
