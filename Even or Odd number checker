@@ -1,0 +1,10 @@
+while True:
+    user_input = input("Enter a number or quit: ")
+    if user_input.lower() == "quit":
+        print("Exiting")
+        break
+    number = int(user_input)
+    if number % 2==0:
+        print(f"{number} is even")
+    else:
+        print(f"{number} is odd")
