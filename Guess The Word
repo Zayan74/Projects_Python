@@ -1,0 +1,11 @@
+secret_word = "hello"
+while True:
+    guess = input("Guess the secret word or type quit to stop: ").lower()
+    if guess == "quit":
+        print("You quit so the game has ended")
+        break
+    elif guess == secret_word:
+        print("You guessed the word!")
+        break
+    else:
+        print("You guessed the wrong word, try again")
