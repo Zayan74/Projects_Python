@@ -1,0 +1,10 @@
+shopping_cart = []
+while True:
+    item = input("Enter something to put in your shopping cart (or type 'quit' to stop): ")
+    if item.lower() == "quit":
+        break
+    shopping_cart.append(item)
+    print(f"{item} has been added to the shopping cart")
+    print("Your final shopping list is: ")
+    for item in shopping_cart:
+        print(f"-{item}")
