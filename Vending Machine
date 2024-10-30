@@ -1,0 +1,43 @@
+items={
+    "1":{"name": "Chips", "Price":1.50},
+    "2":{"name": "Chocolate", "Price":2.50},
+    "3":{"name": "Water", "Price":0.50},
+    "4":{"name": "Soda", "Price":1.50},
+    "5":{"name": "Candy", "Price":1.00}
+}
+def display_items():
+    print("\nItems available:")
+    for key, item in items.items():
+        print(f"{key}.{item['name']}-${item['Price']:2f}")
+def vending_machine():
+    while True:
+        display_items()
+        choice = input("\nSelect any item by number(or type 'exit' to quit): ")
+        if choice.lower()=='exit':
+            print("Thanks for using the vending machine. Goodbye!")
+            break
+        if choice in items:
+            item = items[choice]
+            price = item['Price']
+            print(f"\nYou selected {item['name']} which costs ${price:2f}.")
+            while True:
+                try:
+                    money = float(input("Please insert money: $"))
+                    if money < 0:
+                        print("Please insert a valid amount.")
+                        continue
+                    break
+                except ValueError:
+                    print("Invalid input. Please enter a number.")
+            if money >= price:
+                change = money-price
+                print(f"\nDispensing {item['name']}")
+                if change > 0:
+                    print(f"Your change is ${change:.2f}")
+                print("Enjoy your purchase!")
+            else:
+                print("Insufficient funds.")
+                
+        else:
+            print("Invalid selection.")
+vending_machine()
