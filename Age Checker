@@ -1,0 +1,21 @@
+age = int(input("What is your age: "))
+
+if age >= 6:
+    print("You can go to school")
+else:
+    print("Your still too young to go to school")
+
+if age == 15:
+    print("You can get you learners permit to drive")
+else:
+    print("Your still too young to get a learners permit")
+    
+if age == 16:
+    print("You can get your drivers license")
+else:
+    print("Your still too young to get your drivers license")
+
+if age >= 18:
+    print("You can go to college")
+else:
+    print("Your still too young to go to college")
