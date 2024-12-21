@@ -1,0 +1,5 @@
+print("Welcome to the animal hybrid maker")
+animal1 = input("Enter your first favorite animal: ").strip().lower()
+animal2 = input("Enter your second favorite animal: ").strip().lower()
+newanimal = animal1 + animal2
+print(f"If you mix a {animal1} and a {animal2} you get a new animal hybrid called a {newanimal}")
