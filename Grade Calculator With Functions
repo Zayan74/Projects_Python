@@ -1,0 +1,42 @@
+def get_scores():
+    scores = []
+    while True:
+        try:
+            score = float(input("Enter the scores from your tests (or press -1 to quit): "))
+            if score == -1:
+                break
+            if 0 <= score <= 100:
+                scores.append(score)
+            else:
+                print("Please enter a valid number between 1 and 100.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+    return scores
+def calculate_average(scores):
+    if len(scores) == 0:
+        return 0
+    return sum(scores) / len(scores)
+def determine_grade(average):
+    if average >=90:
+        return 'A'
+    elif average >=80:
+        return 'B'
+    elif average >=70:
+        return 'C'
+    elif average >=60:
+        return 'D'
+    else:
+        return 'F'
+def main():
+    print("This is the Grade Calculator")
+    scores = get_scores()
+    if not scores:
+        print("There werent any scores entered. Quiting Program.")
+        return
+    average = calculate_average(scores)
+    grade = determine_grade(average)
+    print(f"Scores: {scores}")
+    print(f"Average: {average}")
+    print(f"Grade: {grade}")
+if __name__ == "__main__":
+    main()
