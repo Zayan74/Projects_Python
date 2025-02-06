@@ -1,0 +1,43 @@
+'''weight = float(input("What is your weight in KG: "))
+height = float(input("What is your height in meters: "))
+BMI = weight/(height**2)
+if BMI <= 19:
+    print("You are underweight")
+elif 19 < BMI < 25:
+    print("You are normal")
+elif 25 < BMI < 30:
+    print("You are overweight")
+else:
+    print("You are obese")
+    
+
+import math
+radius = float(input("Enter the radius of your circle: "))
+circumfurence = 2 * math.pi * radius
+area = math.pi * radius**2
+print(f"Circumfurence is {circumfurence} and area is {area}")
+
+minutes = int(input("Enter the number of minutes: "))
+hours = minutes /60
+remaining_minutes = minutes % 60
+print(f"Minutes = {minutes}, hours = {hours}, and remaining minutes = {remaining_minutes}")
+
+
+monthly_savings = float(input("Enter the amount of money you save each month: "))
+months = int(input("How many months do you want to save for: "))
+total_savings = months*monthly_savings
+print(f"You will save {total_savings} in {months} months")
+
+
+speed = int(input("What is your speed in km/h: "))
+time = float(input("How long are you driving for (hours): "))
+distance = speed*time
+print(f"Your distance is {distance} kilometers if you are going {speed} km/h for {time} hours")
+
+
+
+original_price = float(input("What was the original price of the item: "))
+discount_percentage = float(input("What was the discount percent: "))
+discount = discount_percentage / 100 * original_price
+final_price = original_price - discount
+print(f"The final price is { final_price}")'''
