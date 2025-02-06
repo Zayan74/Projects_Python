@@ -1,0 +1,22 @@
+class StudentManagement:
+    def __init__(self):
+        self.students = []
+    def add_student(self, name, age, grade):
+        self.students.append({"name": name, "age": age, "grade": grade})
+    def view_students(self):
+        for student in self.students:
+            print(f"Name: {student['name']}, Age: {student['age']}, Grade: {student['grade']}")
+            
+    def search_student(self, name):
+        for student in self.students:
+            if student ["name"]==name:
+                print(f"Found: {student}")
+                return
+        print("Student not found.")
+
+students = StudentManagement()
+students.add_student("James", 15, "9th")
+students.add_student("Kim", 9, "4th")
+students.add_student("Sam", 6, "1st")
+students.view_students()
+students.search_student("Kim")
