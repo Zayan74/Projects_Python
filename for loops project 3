@@ -1,0 +1,36 @@
+#reverse a string
+text = input("Enter a string: ")
+reversed_text = ""
+for char in text:
+    reversed_text = char+reversed_text
+print("the reverse of your string is: "+reversed_text)
+
+numbers = [10, 20, 30, 40, 50]
+total = 0
+for i in numbers:
+    total += i
+average = total/ len(numbers)
+print("The average of the numbers is: ", average)
+
+text = input("Enter a string: ")
+char = input("Enter a character to count: ")
+count = 0
+for i in text:
+    if i == char:
+        count+=1
+print(f"The character {char} appears {count} times in the text '{text}'")
+#square of numbers
+for i in range(5,20):
+    print(f"{i} squared is {i*i}")
+
+#largest number
+x = [10, 23, 35, 47, 58]
+largest = x[0]
+for i in x:
+    if i > largest:
+        largest = i
+print("The largest number is: ", largest)
+
+text = input("Enter a string: ")
+for char in text:
+    print(f" ASCII of '{char}' is {ord(char)}")
