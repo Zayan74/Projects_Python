@@ -1,0 +1,21 @@
+class EmployeeManagement:
+    def __init__(self):
+        self.employees = []
+    def add_employee(self, name, ID, salary):
+        self.employees.append({"name": name, "ID": ID, "salary": salary})
+    def view_employees(self):
+        for employees in self.employees:
+            print(f"Name: {employees['name']}, ID: {employees['ID']}, salary: {employees['salary']}")
+    def search_employee(self, name):
+        for employee in self.employees:
+            if employee ["name"]==name:
+                print(f"Found: {employee}")
+                return
+        print("Employee not found.")
+
+employees = EmployeeManagement()
+employees.add_employee("Frank", 1523, "100,000")
+employees.add_employee("Susie", 3475, "54,000")
+employees.add_employee("Johnny", 2752, "200,000")
+employees.view_employees()
+employees.search_employee("Frank")
