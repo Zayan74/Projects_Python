@@ -1,0 +1,32 @@
+class Attendance_System:
+    def __init__(self):
+        self.attendance = {}
+    def mark_attendance(self, student_name, status):
+        self.attendance[student_name] = status
+    def view_attendance(self):
+        print("\nAttendance Records: ")
+        for name, status in self.attendance.items():
+            print(f"{name}: {status}")
+
+attendance = Attendance_System()
+attendance.mark_attendance("Zayan", "Present")
+attendance.mark_attendance("John", "absent")
+attendance.mark_attendance("Ava", "Present")
+attendance.mark_attendance("Patrick", "Present")
+attendance.view_attendance()
+
+responses = {
+    "hello":"Hi, how can i help you",
+    "how are you": "Im doing pretty good, can I help you with anything",
+    "bye": "Goodbye, glad to be of service"
+}
+
+while True:
+    user_input = input("You: ").lower()
+    if user_input in responses:
+        print("Bot: ", responses[user_input])
+    else:
+        print("Bot: Can you ask an understandable question.")
+    if user_input == "bye":
+        break
+    
