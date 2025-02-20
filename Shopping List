@@ -1,0 +1,32 @@
+class ShoppingList:
+    def __init__(self):
+        self.items = []
+    def add_item(self, item):
+        self.items.append(item)
+        print(f"{item} added successfully")
+    def remove_item(self, item):
+        if item in self.items:
+            self.items.remove(item)
+        print(f"{item} removed successfully")
+    def show_item(self):
+        for i, item in enumerate(self.items,1):
+            print(f"{i}.{item}")
+def main():
+    todo = ShoppingList()
+    while True:
+        print("\n1. Add Item\n2. Remove Item\n3.Show Item\n4.Exit")
+        choice = input("Choose one of the 4 actions: ")
+        if choice == '1':
+            item = input("Enter an item: ")
+            todo.add_item(item)
+        elif choice == '2':
+            item = input("Enter an item to remove: ")
+            todo.remove_item(item)
+        elif choice == '3':
+            todo.show_item()
+        elif choice == '4':
+            break
+        else:
+            print("Invalid Input")
+if __name__ == "__main__":
+    main()
