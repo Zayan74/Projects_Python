@@ -1,0 +1,24 @@
+class CarRentals:
+    def __init__(self):
+        self.cars = {"Toyota": True, "Honda": True, "Ford": False}
+    def rent_cars(self, car_name):
+        if car_name in self.cars and self.cars[car_name]:
+            self.cars[car_name] = False
+            print(f"{car_name} has been rented")
+        else:
+            print("This car is unavailable")
+    def return_car(self, car_name):
+        if car_name in self.cars and not self.cars[car_name]:
+            self.cars[car_name] = True
+            print(f"{car_name} has been returned")
+        else:
+            print("Car return request is invalid")
+    def view_cars(self):
+        print("\nCars Available")
+        for car, available in self.cars.items():
+            print(f"{car}:{'Available' if available else 'rented'}")
+rental = CarRentals()
+rental.view_cars()
+rental.rent_cars("Honda")
+rental.view_cars()
+rental.return_car("Honda")
