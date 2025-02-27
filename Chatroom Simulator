@@ -1,0 +1,16 @@
+class chatRoom:
+    def __init__(self):
+        self.messages=[]
+    def send_message(self, user, message):
+        self.messages.append(f"{user}:{message}")
+        print(f"{user} sent a message!")
+    def show_chat(self):
+        print("\nChat History:")
+        for msg in self.messages:
+            print(msg)
+chat=chatRoom()
+chat.send_message("Amna","Hi, Have you done your homework?")
+chat.send_message("Zayan","Hi, yes i did.")
+chat.send_message("Amna","ok send me")
+chat.send_message("Zayan","sure.")
+chat.show_chat()
