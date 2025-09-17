@@ -1,0 +1,25 @@
+def get_numbers():
+    unique_numbers = []
+    while True:
+        value = input("Enter only odd numbers or enter q to quit: ")
+        if value == "q":
+            break
+        
+        if value.isdigit():
+            number = int(value)
+            if number not in unique_numbers:
+                unique_numbers.append(number)
+                print(f"{number} has been added")
+            else:
+                print(f"{number} already exists, add a different number")
+        else:
+            print("Invlaid Syntax")
+        
+    return unique_numbers
+            
+
+def main():
+    num = get_numbers()
+    print("This is your unique numbers list: ",sorted(num))
+    
+main()
