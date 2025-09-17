@@ -1,0 +1,30 @@
+def main():
+    print("Welcome to the Student Grades Analyzer")
+    grades = []
+    
+    while True:
+        grade = int(input("Enter student grade: "))
+        grades.append(grade)
+        Continue = input("Do you want to continue inputting grades? (yes/no): ").lower()
+        if Continue == "no":
+            break
+
+    if grades:
+        average = sum(grades) / len(grades)
+        highest = max(grades)
+        lowest = min(grades)
+        if average >= 50:
+            status = "Passing" 
+        else:
+            status = "Failling"
+
+        print("Results:")
+        print(f"Average Grade: {average:.2f}")
+        print(f"Highest Grade: {highest}")
+        print(f"Lowest Grade: {lowest}")
+        print(f"Class Status: {status}")
+    else:
+        print("No grades were entered.")
+
+if __name__ == "__main__":
+    main()
