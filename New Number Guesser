@@ -1,0 +1,22 @@
+import random
+
+def choose_number():
+    return random.choice(rc)
+
+def main():
+    rc = [25,35,45,55,65,75,85,95]
+    rc = random.choice(rc)
+    guesses = []
+    while True:
+        guess = int(input("Guess a number between 25 and 95: "))
+        guesses.append(guess)
+        if guess == rc:
+            print("You guessed correctly!")
+            print(f"Your guesses were {guesses}")
+            break
+        elif guess > rc:
+            print("Your guess was too high. Try Again.")
+        else:
+            print("Your guess was too low. Try again")
+
+main()
