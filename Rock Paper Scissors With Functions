@@ -1,0 +1,25 @@
+import random
+
+def play():
+    options = ["rock", "paper", "scissors"]
+    com_choice = random.choice(options)
+    player_choice = input("Do you choose rock, paper, or scissors: ").lower()
+    print(f"The computers choice was {com_choice}")
+    if player_choice == com_choice:
+        print("Its a tie")
+    #Player Wins
+    elif player_choice == "rock" and com_choice == "scissors":
+        print("The player wins")
+    elif player_choice == "scissors" and com_choice == "paper":
+        print("The player wins")
+    elif player_choice == "paper" and com_choice == "rock":
+        print("The player wins")
+    #Computer wins
+    else:
+        print("The computer wins")
+        
+def main():
+    for _ in range(3):
+        play()
+if __name__ == "__main__":
+    main()
