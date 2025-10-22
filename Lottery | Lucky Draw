@@ -1,0 +1,7 @@
+import random
+def draw():
+    return sorted(random.sample(range(20,100),6))
+def main():
+    print(f"Your lucky draw numbers are: {draw()}")
+if __name__ == "__main__":
+    main()
