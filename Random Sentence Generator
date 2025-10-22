@@ -1,0 +1,14 @@
+import random
+
+subjects = ["Ali", "Sarah", "Omar", "John"]
+verbs = ["ran", "found", "discovered", "lost"]
+nouns = ["a mile", "a scary monster", "a big hole", "their phone"]
+
+def generate_sentence():
+    subject = random.choice(subjects)
+    verb = random.choice(verbs)
+    noun = random.choice(nouns)
+    print(f"{subject} {verb} {noun}.")
+
+for i in range(3):
+    generate_sentence()
