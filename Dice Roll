@@ -1,0 +1,18 @@
+import random
+
+def roll_dice(n):
+    history = []
+    for _ in range(n):
+        result = random.randint(1,6)
+        history.append(result)
+    return history
+        
+def main():
+    rolls = int(input("How many times do you want to roll the dice: "))
+    roll_result = roll_dice(rolls)
+    print(roll_result)
+    print("average", sum(roll_result)/len(roll_result))
+
+
+if __name__ == "__main__":
+    main()
