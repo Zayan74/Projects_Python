@@ -1,0 +1,36 @@
+import random
+
+def pick_questions(questions):
+    score = 0
+    for _ in range(3):
+        computer_questions = random.choice(questions)
+
+        # Show the question and options to the user
+        print("\n" + computer_questions["question"])
+        print("Options:", computer_questions["options"])
+
+        # Get user answer
+        answer = int(input("What is the answer: "))
+
+        # Check if answer is correct
+        if answer == computer_questions["answer"]:
+            print("That's correct!")
+            score += 1
+        else:
+            print("That's incorrect.")
+            score += 0
+    print(f"Your score is {score}")
+
+def main():
+    questions = [
+        {"question": "What is 1+1?", "options": [2, 4, 3, 1], "answer": 2}, 
+        {"question": "What is 13-7?", "options": [20, 7, 21, 6], "answer": 6}, 
+        {"question": "What is 3x5?", "options": [18, 15, 12, 21], "answer": 15}, 
+        {"question": "What is 28/4?", "options": [9, 6, 7, 14], "answer": 7}, 
+        {"question": "What is 3-5?", "options": [8, -2, 2, -8], "answer": -2}
+    ]
+    pick_questions(questions)
+    
+
+if __name__ == "__main__":
+    main()
