@@ -1,0 +1,14 @@
+import random
+
+names = ["Ali", "Sarah", "Omar", "John"]
+places = ["castle", "beach", "desert", "forest"]
+actions = ["found treasure", "saw a scary monster", "discovered big hole", "lost their phone"]
+
+def generate_story():
+    name = random.choice(names)
+    place = random.choice(places)
+    action = random.choice(actions)
+    print(f"{name} went to the {place} and {action}.")
+
+for i in range(3):
+    generate_story()
