@@ -1,0 +1,25 @@
+import random
+
+word_bank = ["hunter", "excellence", "cola", "spaghetti", "airplane"]
+chosen_word = random.choice(word_bank)
+hidden_word = ["*"]*len(chosen_word)
+attempts = 6
+while attempts > 0 and "*" in hidden_word:
+    print(hidden_word)
+    guess = input("What letter do you chose: ").lower()
+    if len(guess) != 1 or not guess.isalpha():
+        print("Enter a single letter")
+        continue
+    if guess in chosen_word:
+        for i in range (len(chosen_word)):
+            if chosen_word[i] == guess:
+                hidden_word[i] = guess
+                print(hidden_word)
+                print("You guessed correct")
+                
+    else:
+        print(f"{guess} is not in the hidden word. Try Again")
+        attempts -= 1
+        print(f"You have {attempts} attempts remaining")
+        
+print(f"The word was {chosen_word}")
