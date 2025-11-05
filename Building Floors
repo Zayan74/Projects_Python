@@ -1,0 +1,16 @@
+current_floor = int(input("What floor are you currently on: "))
+max_floors = 30
+target_floor = int(input("What floor do you want to go to: "))
+if max_floors > target_floor > current_floor and current_floor > 0 and target_floor > 0:
+    increase = target_floor - current_floor
+    previous_floor = current_floor
+    current_floor += increase
+    print(f"You have increased from floor {previous_floor} to floor {current_floor} and you passed {increase} floors")
+    
+elif max_floors > target_floor < current_floor:
+    decrease = current_floor - target_floor
+    previous_floor = current_floor
+    current_floor -= decrease
+    print(f"You have decreased from floor {previous_floor} to floor {current_floor} and you passed {decrease} floors")
+    
+    
