@@ -1,0 +1,24 @@
+energy = 20
+position = [0,0]
+exit_position = [3,3]
+while energy > 0:
+    move = input("Do you want to move up, down, left, or right: ").lower()
+    if move == "up":
+        position[1] += 1
+    elif move == "down":
+        position[1] -= 1
+    elif move == "left":
+        position[0] -= 1
+    elif move == "right":
+        position[0] += 1
+    else:
+        print("Invalid Input")
+    energy -= 2
+    
+    if position == exit_position:
+        print(f"Your current position is {position} and you have exited the cave with {energy} energy remaining")
+        break
+    elif energy <= 0:
+        print("You ran out of energy")
+    else:
+        print(f"Your current position is {position} and you have {energy} energy remaining")
