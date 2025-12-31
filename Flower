@@ -1,0 +1,6 @@
+import turtle
+t = turtle.Turtle()
+t.speed(0)
+for i in range(10):
+	t.circle(40)
+	t.left(60)
