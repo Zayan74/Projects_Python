@@ -1,0 +1,19 @@
+import turtle
+t = turtle.Turtle()
+screen = turtle.Screen()
+t.speed(0)
+colors = ["red", "white"]
+size = 30
+screen.bgcolor("black")
+for i in range(5):
+	t.setposition(0,0)
+	t.color(colors[i%2])
+	t.circle(size)
+	t.right(90)
+	t.penup()
+	t.forward(30)
+	t.pendown()
+	t.left(90)
+	size += 30
+
+
