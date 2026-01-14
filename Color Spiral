@@ -1,0 +1,11 @@
+import turtle
+t = turtle.Turtle()
+screen = turtle.Screen()
+t.speed(0)
+screen.bgcolor("black")
+t.setposition(0,0)
+colors = ["red", "orange", "yellow", "green", "blue"]
+for i in range(120):
+  t.color(colors[i%5])
+  t.forward(i*2)
+  t.left(59)
