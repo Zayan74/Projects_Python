@@ -1,0 +1,14 @@
+import turtle
+snake = turtle.Turtle()
+snake.speed(5) # 1:slowest, 3:slow, 5:normal, 10:fast, 0:fastest
+snake.shape("square")
+snake.pensize(5)
+snake.color("yellow")
+snake.forward(50)
+snake.left(90)
+snake.forward(50)
+snake.right(90)
+snake.forward(50)
+snake.left(90)
+snake.forward(50)
+turtle.done()
