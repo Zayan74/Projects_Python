@@ -1,0 +1,34 @@
+import turtle
+screen = turtle.Screen()
+screen.bgcolor("black")
+player = turtle.Turtle()
+player.shape("circle")
+player.color("green")
+player.penup()
+def move_up():
+  player.sety(player.ycor()+30)
+def move_down():
+  player.sety(player.ycor()-30)
+def move_left():
+  player.setx(player.xcor()-30)
+def move_right():
+  player.setx(player.xcor()+30)
+def red():
+  player.color("red")
+def green():
+  player.color("green")
+def blue():
+  player.color("blue")
+def clear():
+  player.clear()
+screen.listen()
+screen.onkey(move_up, "up")
+screen.onkey(move_down, "down")
+screen.onkey(move_left, "left")
+screen.onkey(move_right, "right")
+screen.onkey(red, "r")
+screen.onkey(blue, "b")
+screen.onkey(green, "g")
+screen.onkey(clear, "space")
+player.pendown()
+turtle.done()
