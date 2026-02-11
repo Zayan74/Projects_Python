@@ -1,0 +1,32 @@
+import turtle
+screen=turtle.Screen()
+screen.bgcolor("black")
+player=turtle.Turtle()
+player.shape("triangle")
+player.color("green")
+player.penup()
+player.goto(0,-200)
+player.setheading(90)
+player.speed(0)
+def move_left():
+  player.setx(player.xcor()-30)
+def move_right():
+  player.setx(player.xcor()+30)
+def shoot():
+  bullet=turtle.Turtle()
+  bullet.hideturtle()
+  bullet.shape("triangle")
+  bullet.color("yellow")
+  bullet.penup()
+  bullet.speed(0)
+  bullet.goto(player.xcor(),player.ycor())
+  bullet.setheading(90)
+  bullet.showturtle()
+  for i in range(15):
+ 		bullet.forward(30)
+  bullet.hideturtle()
+screen.listen()
+screen.onkey(move_left,"Left")
+screen.onkey(move_right,"Right")
+screen.onkey(shoot,"space")
+turtle.done()
