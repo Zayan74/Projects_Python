@@ -26,3 +26,6 @@ def move_right():
 screen.listen()
 screen.onkey(move_left, "left")
 screen.onkey(move_right, "right")
+
+item.speed(5)
+item.forward(700)
