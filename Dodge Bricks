@@ -1,0 +1,43 @@
+import time
+import turtle
+import random
+
+screen = turtle.Screen()
+screen.bgcolor("black")
+item = turtle.Turtle()
+item.penup()
+item.shape("square")
+item.color("blue")
+item.speed(0)
+item.setposition(random.randint(-200, 200), 300)
+item.right(90)
+
+player = turtle.Turtle()
+player.penup()
+player.shape("square")
+player.color("green")
+player.speed(0)
+player.setposition(0, -280)
+player.speed(4)
+player.penup()
+def move_left():
+  player.setx(player.xcor()-30)
+def move_right():
+  player.setx(player.xcor()+30)
+screen.listen()
+screen.onkey(move_left, "left")
+screen.onkey(move_right, "right")
+
+item.speed(5)
+item.forward(700)
+gameloop = True
+while gameloop:
+  item.sety(item.ycor()-10)
+  if item.ycor() < -300:
+    item.setposition((random.randint(-200, 200)), 300)
+  if item.distance(player) < 20:
+    item.setposition((random.randint(-200, 200),300))
+  time.sleep(0.01)
+  if item.distance(player) < 20:
+    print("Game Over!")
+    break
